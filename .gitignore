@@ -1,0 +1,22 @@
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.env
+backend/data/raw_dataset.csv
+
+# Raw dataset download (large files, see backend/README.md for the download link)
+dataset/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Demo video (link it in README instead of committing a large binary)
+demo_video.mp4

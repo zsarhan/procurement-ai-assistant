@@ -1,0 +1,78 @@
+.ambient-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.2;
+  will-change: transform;
+}
+
+.orb-blue {
+  width: 480px;
+  height: 480px;
+  top: -12%;
+  left: -8%;
+  background: #3b82f6;
+  animation: drift-blue 22s ease-in-out infinite;
+}
+
+.orb-violet {
+  width: 520px;
+  height: 520px;
+  top: 28%;
+  right: -12%;
+  background: #8b5cf6;
+  animation: drift-violet 26s ease-in-out infinite;
+}
+
+.orb-magenta {
+  width: 440px;
+  height: 440px;
+  bottom: -14%;
+  left: 22%;
+  background: #ec4899;
+  animation: drift-magenta 20s ease-in-out infinite;
+}
+
+@keyframes drift-blue {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(60px, 80px) scale(1.1);
+  }
+}
+
+@keyframes drift-violet {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-70px, 50px) scale(1.05);
+  }
+}
+
+@keyframes drift-magenta {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -60px) scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb {
+    animation: none;
+  }
+}
